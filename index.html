@@ -9,8 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Chart.js para el panel -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-  <script type="module" crossorigin src="/control_gastos/assets/index-BCenyiRL.js"></script>
-  <link rel="stylesheet" crossorigin href="/control_gastos/assets/index-Cv_XRinj.css">
+  <script type="module" crossorigin src="/control_gastos/assets/index-HDSftKfC.js"></script>
+  <link rel="stylesheet" crossorigin href="/control_gastos/assets/index-BjbbuBRw.css">
 </head>
 <body>
   <div id="app">
@@ -78,6 +78,12 @@
         </div>
         <button id="btn-save-scanned" class="btn-primary">Guardar Gasto</button>
       </div>
+
+      <!-- Botón Flotante para Entrada Manual -->
+      <button id="fab-manual" class="fab-btn" title="Entrada Manual">
+        <span>+</span>
+      </button>
+    </main>
     </main>
 
     <!-- Vista: Entrada Manual -->
@@ -93,6 +99,10 @@
              <input type="text" id="new-store-input" placeholder="Nueva tienda..." class="hidden">
              <button id="toggle-new-store" type="button" class="btn-icon">✚</button>
           </div>
+        </div>
+        <div class="input-group">
+          <label for="manual-date">Fecha del Gasto</label>
+          <input type="date" id="manual-date">
         </div>
         <div class="input-group">
           <label for="manual-total">Importe Total (€)</label>
@@ -279,6 +289,18 @@
             <input type="checkbox" id="check-extreme">
             <span class="slider round"></span>
           </label>
+        </div>
+
+        <div class="divider"></div>
+        
+        <h3 class="small-title">Sincronización Familiar (Gist)</h3>
+        <div class="input-group">
+          <label for="input-gist-id">ID del Gist</label>
+          <input type="text" id="input-gist-id" placeholder="ID del Gist compartido">
+        </div>
+        <div class="input-group">
+          <label for="input-github-token">GitHub Token</label>
+          <input type="password" id="input-github-token" placeholder="ghp_xxxx...">
         </div>
 
         <div class="divider"></div>
