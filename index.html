@@ -9,8 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Chart.js para el panel -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-  <script type="module" crossorigin src="/control_gastos/assets/index-CGumFBM8.js"></script>
-  <link rel="stylesheet" crossorigin href="/control_gastos/assets/index-Cp4h_lwE.css">
+  <script type="module" crossorigin src="/control_gastos/assets/index-BCenyiRL.js"></script>
+  <link rel="stylesheet" crossorigin href="/control_gastos/assets/index-Cv_XRinj.css">
 </head>
 <body>
   <div id="app">
@@ -62,8 +62,19 @@
           <span id="res-store" class="value"></span>
         </div>
         <div class="result-row">
+          <span class="label">Fecha:</span>
+          <span id="res-date" class="value"></span>
+        </div>
+        <div class="result-row">
           <span class="label">Total a pagar:</span>
           <span id="res-total" class="value total-value"></span>
+        </div>
+        <!-- Desglose de artículos -->
+        <div class="result-items-container">
+          <span class="label">Artículos detectados:</span>
+          <ul id="res-items-list" class="res-items-list">
+            <!-- Dinámico -->
+          </ul>
         </div>
         <button id="btn-save-scanned" class="btn-primary">Guardar Gasto</button>
       </div>
@@ -306,7 +317,8 @@
         <p id="loading-text">Analizando ticket...</p>
       </div>
     </div>
-
+    <!-- Contenedor de Notificaciones (Toasts) -->
+    <div id="toast-container" class="toast-container"></div>
   </div>
   
 </body>
