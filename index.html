@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Chart.js para el panel -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-  <script type="module" crossorigin src="/control_gastos/assets/index-BqynVj2N.js"></script>
+  <script type="module" crossorigin src="/control_gastos/assets/index-DX_HB1UO.js"></script>
   <link rel="modulepreload" crossorigin href="/control_gastos/assets/rolldown-runtime-lhHHWwHU.js">
   <link rel="modulepreload" crossorigin href="/control_gastos/assets/db-E0Ct_KN5.js">
   <link rel="stylesheet" crossorigin href="/control_gastos/assets/index-Dp7kjFr8.css">
@@ -351,14 +351,19 @@
 
         <div class="divider"></div>
         
-        <h3 class="small-title">Sincronización Familiar (Gist)</h3>
         <div class="input-group">
           <label for="input-gist-id">ID del Gist</label>
-          <input type="text" id="input-gist-id" placeholder="ID del Gist compartido">
+          <div style="display:flex; gap:0.5rem">
+            <input type="text" id="input-gist-id" placeholder="ID del Gist compartido" style="flex:1">
+            <button class="btn-secondary" onclick="window.crearGistAutomatico()" title="Crear uno nuevo">✨ Nuevo</button>
+          </div>
         </div>
         <div class="input-group">
           <label for="input-github-token">GitHub Token</label>
-          <input type="password" id="input-github-token" placeholder="ghp_xxxx...">
+          <div style="display:flex; gap:0.5rem">
+            <input type="password" id="input-github-token" placeholder="ghp_xxxx..." style="flex:1">
+            <button class="btn-secondary" onclick="window.testConexionGithub()" title="Probar conexión">🧪 Test</button>
+          </div>
         </div>
 
         <div class="divider"></div>
