@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Chart.js para el panel -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-  <script type="module" crossorigin src="/control_gastos/assets/index-U0MKa-Oc.js"></script>
+  <script type="module" crossorigin src="/control_gastos/assets/index-TJ6bX27W.js"></script>
   <link rel="modulepreload" crossorigin href="/control_gastos/assets/rolldown-runtime-lhHHWwHU.js">
   <link rel="modulepreload" crossorigin href="/control_gastos/assets/db-DrM7HLg4.js">
   <link rel="stylesheet" crossorigin href="/control_gastos/assets/index-Dp7kjFr8.css">
@@ -338,8 +338,11 @@
         
         <div class="input-group">
           <label for="input-api-key-settings">🔑 Google AI API Key</label>
-          <input type="password" id="input-api-key-settings" placeholder="AIzaSy..." autocomplete="off">
-          <p class="small-text" style="margin-top:0.3rem">Cámbiala si ha caducado o ha sido bloqueada.</p>
+          <div style="display:flex; gap:0.5rem">
+            <input type="password" id="input-api-key-settings" placeholder="AIzaSy..." autocomplete="off" style="flex:1">
+            <button class="btn-secondary" onclick="window.borrarApiKey()" title="Borrar key guardada" style="white-space:nowrap">🗑️ Borrar</button>
+          </div>
+          <p class="small-text" style="margin-top:0.3rem">Cámbiala si ha caducado o ha sido bloqueada. Pulsa 🗑️ para borrarla.</p>
         </div>
 
         <div class="divider"></div>
