@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Chart.js para el panel -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-  <script type="module" crossorigin src="/control_gastos/assets/index-BuDqRZA3.js"></script>
+  <script type="module" crossorigin src="/control_gastos/assets/index-DN_diWF8.js"></script>
   <link rel="modulepreload" crossorigin href="/control_gastos/assets/rolldown-runtime-lhHHWwHU.js">
   <link rel="modulepreload" crossorigin href="/control_gastos/assets/db-bCkAi81-.js">
   <link rel="stylesheet" crossorigin href="/control_gastos/assets/index-Dp7kjFr8.css">
@@ -223,7 +223,10 @@
 
         <!-- Pantalla 2: Detalle de la Lista -->
         <div id="shopping-list-detail" class="hidden">
-          <h3 id="current-list-title" class="small-title">Cargando...</h3>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h3 id="current-list-title" class="small-title" style="margin:0;">Cargando...</h3>
+            <span id="current-list-total" style="display:none; background:var(--card-bg); padding:0.2rem 0.6rem; border-radius:12px; font-weight:bold; color:var(--accent); font-size:0.9rem; border:1px solid var(--border)"></span>
+          </div>
           <div class="input-group">
             <div class="combo-box">
               <input type="text" id="shop-item-input" placeholder="Añadir a esta tienda...">
