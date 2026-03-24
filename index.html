@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Chart.js para el panel -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-  <script type="module" crossorigin src="/control_gastos/assets/index-WaTSxQ4R.js"></script>
+  <script type="module" crossorigin src="/control_gastos/assets/index-B3Z63Rm6.js"></script>
   <link rel="modulepreload" crossorigin href="/control_gastos/assets/rolldown-runtime-lhHHWwHU.js">
   <link rel="modulepreload" crossorigin href="/control_gastos/assets/db-bCkAi81-.js">
   <link rel="stylesheet" crossorigin href="/control_gastos/assets/index-Dp7kjFr8.css">
@@ -209,10 +209,12 @@
             <label>Crear Nueva Lista</label>
             <div class="combo-box">
               <select id="shop-store-select">
-                <option value="" disabled selected>Selecciona una tienda...</option>
+                <option value="" disabled selected>Selecciona o escribe una tienda...</option>
               </select>
-              <button id="btn-create-list" class="btn-primary">Nueva</button>
+              <input type="text" id="new-shop-store-input" placeholder="Nueva tienda..." class="hidden">
+              <button id="toggle-new-shop-store" type="button" class="btn-icon" title="Añadir nueva tienda">✚</button>
             </div>
+            <button id="btn-create-list" class="btn-primary" style="margin-top: 0.5rem; width: 100%;">Crear Lista</button>
           </div>
           <div id="active-lists-container" class="lists-grid">
             <!-- Botones de tiendas con listas activas -->
@@ -228,6 +230,12 @@
               <button id="btn-add-item-to-list" class="btn-icon">✚</button>
             </div>
           </div>
+          
+          <div class="bot-actions" style="display:flex; gap:0.5rem; margin-bottom:1rem">
+             <button id="btn-ia-precios" onclick="window.searchListPricesIA('store')" class="btn-secondary" style="flex:1; font-size: 0.8rem; padding: 0.6rem" title="Buscar precios en esta tienda con IA">🤖 Precios en Tienda</button>
+             <button id="btn-ia-ahorro" onclick="window.searchListPricesIA('global')" class="btn-secondary" style="flex:1; font-size: 0.8rem; padding: 0.6rem" title="Buscar dónde es más barato cada producto con IA">💸 Ahorrar Ofertas</button>
+          </div>
+          
           <div id="shopping-items-container" class="shopping-container">
             <!-- Items de la tienda seleccionada -->
           </div>
