@@ -1,9 +1,9 @@
 /*
   Service Worker for Control de Gastos PWA
-  Version: 1.1.0 (Actualiza esta versión para forzar la recarga de caché)
+  Version: 1.1.1 (Actualiza esta versión para forzar la recarga de caché)
 */
 
-const CACHE_NAME = 'gastos-pwa-v1.1.0';
+const CACHE_NAME = 'gastos-pwa-v1.1.1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
