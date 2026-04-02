@@ -14,10 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Chart.js para el panel -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-  <script type="module" crossorigin src="./assets/index-DX4-hnHz.js"></script>
+  <script type="module" crossorigin src="./assets/index-WL5_bnIY.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-lhHHWwHU.js">
   <link rel="modulepreload" crossorigin href="./assets/db-bCkAi81-.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-CwkxOxCz.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-iSBE_FrS.css">
 </head>
 <body>
   <div id="app">
@@ -416,6 +416,29 @@
         </div>
         <button id="btn-save-key" class="btn-primary">Guardar Clave</button>
         <p class="small-text">La clave se guardará de forma segura en tu navegador y no se compartirá con nadie.</p>
+      </div>
+    </div>
+
+    <!-- Modal: Editar Item de la Lista -->
+    <div id="modal-edit-item" class="modal">
+      <div class="modal-content">
+        <h2 class="gradient-text">Editar Producto</h2>
+        <div class="input-group">
+          <label for="edit-item-name">Nombre del Producto</label>
+          <input type="text" id="edit-item-name">
+        </div>
+        <div class="input-group">
+          <label>Cantidad</label>
+          <div class="quantity-selector">
+            <button type="button" onclick="window.adjustEditQty(-1)" class="btn-icon">-</button>
+            <input type="number" id="edit-item-qty" min="1" step="1" style="text-align:center">
+            <button type="button" onclick="window.adjustEditQty(1)" class="btn-icon">+</button>
+          </div>
+        </div>
+        <div class="button-grid" style="margin-top:2rem">
+          <button id="btn-save-edit-item" class="btn-primary">Guardar Cambios</button>
+          <button id="btn-close-edit-item" class="btn-secondary">Cancelar</button>
+        </div>
       </div>
     </div>
 
